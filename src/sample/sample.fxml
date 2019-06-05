@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="338.0" prefWidth="633.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Button id="update" layoutX="233.0" layoutY="51.0" mnemonicParsing="false" onAction="#selectExcel" text="选择excel文件" AnchorPane.leftAnchor="100.0" />
+      <Button id="down" layoutX="233.0" layoutY="128.0" mnemonicParsing="false" text="下载excel文件" visible="false" />
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>
