@@ -5,14 +5,14 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-//import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class Controller {
-//    private HSSFWorkbook workbook;
+
     @FXML
     private Button update;
     @FXML
@@ -30,7 +30,9 @@ public class Controller {
         File file = fileChooser.showOpenDialog(selectFile);
         if (file != null) {
             System.out.println(file);
-//            Manager.createRecord(file, workbook);
+            XSSFWorkbook workbook = new XSSFWorkbook();
+            Manager.createTable(workbook);
+            Manager.createRecord(file, workbook);
         }
 
     }
