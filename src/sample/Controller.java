@@ -3,6 +3,7 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.RadioButton;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -31,8 +32,7 @@ public class Controller {
         if (file != null) {
             System.out.println(file);
             XSSFWorkbook workbook = new XSSFWorkbook();
-            Manager.createTable(workbook);
-            Manager.createRecord(file, workbook);
+            Manager.createRecord(file, workbook, 1);
         }
 
     }
